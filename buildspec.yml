@@ -5,10 +5,11 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - npm install
+      - npm ci  # or 'npm install' if not using lock file
   build:
     commands:
       - npm run build
+
 artifacts:
   base-directory: dist
   files:
