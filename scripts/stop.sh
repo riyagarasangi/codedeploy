@@ -1,11 +1,8 @@
 #!/bin/bash
 
-echo "Running start.sh"
+echo "Running stop.sh"
 
-# For static HTML:
-systemctl start httpd
+# Kill all node processes (be careful in shared environments)
+pkill node || echo "No node process found"
 
-# Optional: ensure it runs on boot
-systemctl enable httpd
-
-echo "Application started"
+echo "Application stopped"
