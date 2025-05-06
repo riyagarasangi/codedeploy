@@ -2,10 +2,9 @@
 
 echo "Running start.sh"
 
-# For static HTML:
-systemctl start httpd
+cd /home/ec2-user/mywebapp
 
-# Optional: ensure it runs on boot
-systemctl enable httpd
+# Start the app in the background
+nohup npm start > app.log 2>&1 &
 
 echo "Application started"
