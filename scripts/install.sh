@@ -2,10 +2,9 @@
 
 echo "Running install.sh"
 
-# Clean old app if exists
-rm -rf /var/www/html/*
+cd /home/ec2-user/mywebapp
 
-# Optional: install packages if needed
-# yum install -y httpd  # for Apache (if not already installed)
+# Install Node.js dependencies
+npm install
 
-echo "Install phase completed"
+echo "Dependencies installed"
